@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>soixantesouris</title>
+  </head>
+  <body>
+    <p class="js-print"></p>
+    <script type="text/javascript">
+      var remote = require('remote');
+      var robot = remote.require("robotjs");
+      setInterval(function () {
+        var mouse=robot.getMousePos();
+        document.querySelector('.js-print').textContent = 'x: ' + mouse.x + ' - y: ' + mouse.y;
+        console.log("Mouse is at x:" + mouse.x + " y:" + mouse.y);
+      }, 30);
+    </script>
+  </body>
+</html>
