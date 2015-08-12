@@ -8,6 +8,7 @@
   "author": "@hugohil",
   "license": "MIT",
   "dependencies": {
+    "menubar": "^2.1.1",
     "robotjs": "^0.2.3"
   },
   "devDependencies": {

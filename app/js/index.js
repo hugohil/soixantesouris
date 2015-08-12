@@ -2,9 +2,14 @@
 
 (function(){
   var remote = require('remote');
-  var robot = remote.require("robotjs");
+  var ipc = require('ipc');
+  var robot = remote.require('robotjs');
 
   var socket = io('http://' + config.socket.address + ':' + config.socket.port + config.socket.nsp);
+
+  document.querySelector('.js-quit').onclick = function(){
+    ipc.send('user-quit');
+  }
 
   setInterval(function () {
     var mouse=robot.getMousePos();
