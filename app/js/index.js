@@ -4,7 +4,7 @@
   var remote = require('remote');
   var robot = remote.require("robotjs");
 
-  var socket = io('http://localhost:1337/inputs');
+  var socket = io('http://' + config.socket.address + ':' + config.socket.port + config.socket.nsp);
 
   setInterval(function () {
     var mouse=robot.getMousePos();

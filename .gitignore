@@ -18,3 +18,5 @@ node_modules/
 *.asar
 debug.log
 npm-debug.log
+
+app/js/config.js
